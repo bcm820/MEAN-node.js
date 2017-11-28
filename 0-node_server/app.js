@@ -17,7 +17,7 @@ const server = http.createServer((request, response) => { // create a server usi
     }
 
     // For linked CSS files
-    else if(request.url === '/style.css'){
+    else if(request.url === '/css/style.css'){
         fs.readFile('style.css', 'utf8', (errors, contents) => {
             response.writeHead(200, {'Content-Type': 'text/css'});
             response.write(contents);
